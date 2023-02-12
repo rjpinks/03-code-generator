@@ -12,17 +12,25 @@
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 var newElement = document.createElement("section");
-var newInput = document.createElement("input");
-var textInBox = document.querySelector("#password")
-function firstClick() {
-  newInput
-  document.body.appendChild(newInput);
-  newInput.setAttribute("type", "text");
-  newInput.setAttribute("placeholder", "Enter Value here!");
-  textInBox.setAttribute("placeholder", "Desired # of Characters (8-126)");
-  return;
+var numberDesired = 0
+var charactersDesired = ""
+
+//Right now you just need to figure out how to save the data globally from the alerts
+function firstPrompt() {
+   var newInput = prompt("Enter Desired # of Characters (8-126)");
+   if (newInput >= 8 && newInput <= 126) {
+    var numberDesired = newInput
+    console.log(numberDesired)
+    var newerInput = prompt("Press 1:lowercase 2:uppercase 3: numbers 4:special characters. Use 1+2+3 pattern to use more than one!");
+    console.log(newerInput)
+   } else {
+    var newInput = prompt("Please only 8-126")
+    var numberDesired = newInput
+    console.log(numberDesired)
+   }
+   return;
 }
-generateBtn.addEventListener("click", firstClick);
+generateBtn.addEventListener("click", firstPrompt);
 // Write password to the #password input
 // function writePassword() {
 //   var password = generatePassword();
