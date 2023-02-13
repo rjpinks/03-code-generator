@@ -19,18 +19,106 @@ var charactersDesired = ""
 function firstPrompt() {
    var newInput = prompt("Enter Desired # of Characters (8-126)");
    if (newInput >= 8 && newInput <= 126) {
-    var numberDesired = newInput
-    console.log(numberDesired)
-    var newerInput = prompt("Press 1:lowercase 2:uppercase 3: numbers 4:special characters. Use 1+2+3 pattern to use more than one!");
+    globalThis.numberDesired = newInput
+    var newerInput = prompt("Press 1:lowercase 2:uppercase 3: numbers 4:special characters. (E.g. '2+4' will chose uppercase and special characters)");
     console.log(newerInput)
+    if (newerInput === 1) {
+      globalThis.charactersDesired = newerInput
+    } else if (newerInput === 2) {
+      globalThis.charactersDesired = newerInput
+    } else if (newerInput === 3) {
+      globalThis.charactersDesired = newerInput
+    } else if (newerInput === 4) {
+      globalThis.charactersDesired = newerInput
+    } else if (newerInput === "1+2") {
+      globalThis.charactersDesired = newerInput
+    } else if (newerInput === "1+3") {
+      globalThis.charactersDesired = newerInput
+    } else if (newerInput === "1+4") {
+      globalThis.charactersDesired = newerInput
+    } else if (newerInput === "2+1") {
+      globalThis.charactersDesired = newerInput
+    } else if (newerInput === "2+2") {
+      globalThis.charactersDesired = newerInput
+    } else if (newerInput === "2+3") {
+      globalThis.charactersDesired = newerInput
+    } else if (newerInput === "2+4") {
+      globalThis.charactersDesired = newerInput
+    } else if (newerInput === "3+1") {
+      globalThis.charactersDesired = newerInput
+    } else if (newerInput === "3+2") {
+      globalThis.charactersDesired = newerInput
+    } else if (newerInput === "3+3") {
+      globalThis.charactersDesired = newerInput
+    } else if (newerInput === "3+4") {
+      globalThis.charactersDesired = newerInput
+    } else if (newerInput === "4+1") {
+      globalThis.charactersDesired = newerInput
+    } else if (newerInput === "4+2") {
+      globalThis.charactersDesired = newerInput
+    } else if (newerInput === "4+3") {
+      globalThis.charactersDesired = newerInput
+    } else if (newerInput === "4+4") {
+      globalThis.charactersDesired = newerInput
+    } else {
+      var newerInput = prompt("Please try again")
+      globalThis.charactersDesired = newerInput
+    }
    } else {
     var newInput = prompt("Please only 8-126")
-    var numberDesired = newInput
+    globalThis.numberDesired = newInput
     console.log(numberDesired)
+    var newerInput = prompt("Press 1:lowercase 2:uppercase 3: numbers 4:special characters. (E.g. '2+4' will chose uppercase and special characters)");
+    console.log(newerInput)
+    if (newerInput === 1) {
+      globalThis.charactersDesired = newerInput
+    } else if (newerInput === 2) {
+      globalThis.charactersDesired = newerInput
+    } else if (newerInput === 3) {
+      globalThis.charactersDesired = newerInput
+    } else if (newerInput === 4) {
+      globalThis.charactersDesired = newerInput
+    } else if (newerInput === "1+2") {
+      globalThis.charactersDesired = newerInput
+    } else if (newerInput === "1+3") {
+      globalThis.charactersDesired = newerInput
+    } else if (newerInput === "1+4") {
+      globalThis.charactersDesired = newerInput
+    } else if (newerInput === "2+1") {
+      globalThis.charactersDesired = newerInput
+    } else if (newerInput === "2+2") {
+      globalThis.charactersDesired = newerInput
+    } else if (newerInput === "2+3") {
+      globalThis.charactersDesired = newerInput
+    } else if (newerInput === "2+4") {
+      globalThis.charactersDesired = newerInput
+    } else if (newerInput === "3+1") {
+      globalThis.charactersDesired = newerInput
+    } else if (newerInput === "3+2") {
+      globalThis.charactersDesired = newerInput
+    } else if (newerInput === "3+3") {
+      globalThis.charactersDesired = newerInput
+    } else if (newerInput === "3+4") {
+      globalThis.charactersDesired = newerInput
+    } else if (newerInput === "4+1") {
+      globalThis.charactersDesired = newerInput
+    } else if (newerInput === "4+2") {
+      globalThis.charactersDesired = newerInput
+    } else if (newerInput === "4+3") {
+      globalThis.charactersDesired = newerInput
+    } else if (newerInput === "4+4") {
+      globalThis.charactersDesired = newerInput
+    } else {
+      var newerInput = prompt("Please try again")
+      globalThis.charactersDesired = newerInput
+    }
    }
    return;
 }
+
 generateBtn.addEventListener("click", firstPrompt);
+console.log(numberDesired)
+console.log(charactersDesired)
 // Write password to the #password input
 // function writePassword() {
 //   var password = generatePassword();
